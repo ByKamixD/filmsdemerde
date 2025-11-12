@@ -42,5 +42,16 @@
     "ageRating": "Interdit aux moins de 16 ans",
     "poster": "",
     "imdbRating": ""
+  },
+  {
+    "id": "1762962844379",
+    "title": "Film de gros lard",
+    "year": 1888,
+    "link": "https://github.com/ByKamixD/filmsdemerde/blob/main/movies.json",
+    "description": "un gros lard hihihi",
+    "rating": 3,
+    "ageRating": "16",
+    "poster": "https://cdn.discordapp.com/attachments/1147666150369529916/1437900442519601386/image.png?ex=69159564&is=691443e4&hm=b53e340b26f23b2d782c40c95728b617432f3c717ad9587ab47393fc87b176d2&",
+    "imdbRating": "6"
   }
 ]
