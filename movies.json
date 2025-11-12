@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1a",
+    "title": "À contre-sens 1: Ma faute",
+    "year": 2023,
+    "link": "https://drive.google.com/file/d/1eHZlYFjHSaInN0JulGK5UJDeIYYBOJe6/view?usp=drive_link",
+    "description": "Noah, dix-sept ans, doit tout quitter pour emménager dans le manoir de William Leister, le nouveau et riche mari de sa mère. Noah rencontre Nick, son nouveau demi-frère, et découvre qu'il cache une vie de bagarre, de jeu et de courses automobiles illégales. Ni la rivalité permanente, ni l'opposition de leur entourage ne peuvent les empêcher de tomber secrètement et follement amoureux. Or, le présent turbulent de Nick et le passé orageux de Noah mettront à l'épreuve leur amour interdit.",
+    "rating": 3.3,
+    "ageRating": "Interdit aux moins de 16 ans",
+    "poster": "",
+    "imdbRating": ""
+  },
+  {
+    "id": "2",
+    "title": "À contre‑sens 2: Ta faute",
+    "year": 2024,
+    "link": "https://drive.google.com/file/d/1JuMzImluKUWE0FzECkUOzPrq7ZqVUibi/view?usp=drive_link",
+    "description": "L'amour entre Noah et Nick semble indéfectible, malgré les manœuvres de leurs parents pour les séparer. Mais le travail de Noah et l'entrée de Nick à l'université ouvrent leur vie à de nouvelles relations. L'apparition d'une ex-petite amie en quête de vengeance et de la mère de Nick aux intentions peu claires va ébranler les fondements non seulement de leur relation, mais aussi de la famille Leister elle-même. Lorsque tant de personnes cherchent à détruire une relation, celle-ci peut-elle vraiment bien se terminer ?",
+    "rating": 2.6,
+    "ageRating": "Interdit aux moins de 16 ans",
+    "poster": "",
+    "imdbRating": ""
+  },
+  {
+    "id": "1b",
+    "title": "À contre‑sens 1: Ma faute (Londres - Remake)",
+    "year": 2025,
+    "link": "https://drive.google.com/file/d/1C-Lytw0iIEXkjJiWXnkRuau5aionsDNg/view?usp=drive_link",
+    "description": "Lorsque la mère de Noah, Ella, tombe amoureuse du richissime William, tous deux quittent l'Amérique pour aller vivre à Londres avec William et son fils Nick. Dès son arrivée, Noah, âgée de 18 ans, rencontre Nick, un mauvais garçon, et une attirance immédiate naît entre eux. Noah passe l'été à s'adapter à sa nouvelle vie, à se faire de nouveaux amis dans les différents cercles de Nick, et à naviguer dans une relation compliquée avec lui tout en luttant pour garder l'attirance à distance. Mais à l'insu de Noah, son père, dont elle est séparée, a été libéré de prison et commence à traquer ses moindres faits et gestes. Noah sera finalement obligée de faire face à son passé dévastateur tout en tombant amoureuse pour la première fois.",
+    "rating": 3.2,
+    "ageRating": "Interdit aux moins de 16 ans",
+    "poster": "",
+    "imdbRating": ""
+  },
+  {
+    "id": "3",
+    "title": "À contre‑sens 3: Notre faute",
+    "year": 2025,
+    "link": "https://drive.google.com/file/d/13DPO2njt6Vh8q_vV-VRmZ31UJfvCy-iP/view?usp=drive_link",
+    "description": "Le mariage de Jenna et Lion ouvre la voie aux retrouvailles tant attendues entre Noah et Nick, quelque temps après leur rupture. L'incapacité de Nick à pardonner à Noah crée une barrière apparemment insurmontable entre eux. Lui, désormais héritier de l'empire commercial de son grand-père, et elle, qui commence à peine sa carrière, résistent à l'envie de raviver une flamme qui couve encore en eux. Mais alors que leurs chemins se croisent à nouveau, l'amour sera-t-il plus fort que la rancune ?",
+    "rating": 2.5,
+    "ageRating": "Interdit aux moins de 16 ans",
+    "poster": "",
+    "imdbRating": ""
+  }
+]
