@@ -58,5 +58,65 @@
         "link": "https://drive.google.com/file/d/13DPO2njt6Vh8q_vV-VRmZ31UJfvCy-iP/view?usp=drive_link"
       }
     ]
+  },
+  {
+    "id": "1762970072259",
+    "title": "Scream",
+    "year": 1996,
+    "description": "Casey Becker, une belle adolescente, est seule dans la maison familiale. Elle s'apprête à regarder un film d'horreur, mais le téléphone sonne. Au bout du fil, un serial killer la malmène, et la force à jouer à un jeu terrible : si elle répond mal à ses questions portant sur les films d'horreur, celui-ci tuera son copain… Sidney Prescott sait qu'elle est l'une des victimes potentielles du tueur de Woodsboro. Celle-ci ne sait plus à qui faire confiance. Entre Billy, son petit ami, sa meilleure amie Tatum et son frère Dewey, ses copains de classe Stuart et Randy, la journaliste arriviste Gale Weathers et son caméraman Kenny qui traînent tout le temps dans les parages et son père toujours absent, qui se cache derrière le masque du tueur ?",
+    "tmdbRating": "7.4",
+    "ageRating": "Interdit aux moins de 12 ans",
+    "poster": "https://image.tmdb.org/t/p/w500/9LfX3IBeByGdFkmkmNztKBr4nYv.jpg",
+    "versions": [
+      {
+        "type": "VOSTFR",
+        "link": "https://drive.google.com/drive/u/1/folders/1RnSTF1Xy6neNjVKVukXp0gcO9BzNirgv"
+      }
+    ]
+  },
+  {
+    "id": "1762970131480",
+    "title": "Scream 2",
+    "year": 1997,
+    "description": "Phil Stevens et sa copine Maureen Evans sortent ensemble voir en avant‑première le film « Stab », inspirée de la tuerie de la ville de Woodsboro l'année précédente. Le public porte d'ailleurs en grande partie le costume du tueur. Mais parmi les fans déchaînés se cachent un nouvel assassin, qui poignarde devant toute l'audience la pauvre Maureen… Sidney Prescott, une des réelles survivantes du premier massacre, s'est inscrit à la fac de Windsor où elle apprend l'art dramatique, avec son ami Randy. Mais avec ce nouveau fait divers, la jeune femme prend peur et ne peut à nouveau plus faire confiance en personne. Surtout qu'un meurtre intervient dans l'enceinte même du campus : la jeune Casey Cooper a été défenestré après avoir subi deux coups de couteau. Pour Sidney, ça ne fait aucun doute : le cauchemar recommence. Mais qui peut donc s'acharner à vouloir sa mort ? Et pourquoi ?",
+    "tmdbRating": "6.5",
+    "ageRating": "Interdit aux moins de 12 ans",
+    "poster": "https://image.tmdb.org/t/p/w500/tQjkmhosfaZRllklX7P92xBO62o.jpg",
+    "versions": [
+      {
+        "type": "VOSTFR",
+        "link": "https://drive.google.com/drive/folders/14i1xAh60hjrlhDo-78F2AyDqpx0ULyTF?usp=drive_link"
+      }
+    ]
+  },
+  {
+    "id": "1762970233784",
+    "title": "Scream 3",
+    "year": 2000,
+    "description": "Cotton Weary, l'un des survivants de la tuerie de la fac de Windsor, rentre tranquillement chez lui après avoir terminé le tournage de l'émission quotidienne qu'il anime. Le téléphone sonne. Au bout du fil, une fan… qui s'avère être un dangereux tueur, prêt à tout pour retrouver la trace de Sydney Prescott. La jeune femme reste terrée dans une maison surprotégée, afin d'effacer les souvenirs traumatisants dont elle a été précédemment l'héroïne malheureuse lors des massacres perpétrés à Woodsboroo et à Windsor. Le sujet semble quant à lui à la mode, puisque John Milton a décidé de produire un troisième film , « Stab 3 », relatant les agissements du mystérieux tueur masqué. Mais la réalité rattrape à nouveau la fiction lorsque l'une des actrices principales est sauvagement assassiné sur le plateau. Qui s'acharne à vouloir détruire Sydney ? La clé du mystère ne remonte-t-elle pas aux origines de toute cette histoire ?",
+    "tmdbRating": "6.0",
+    "ageRating": "Interdit aux moins de 12 ans",
+    "poster": "https://image.tmdb.org/t/p/w500/8LRHJfLWUx3mRLymFwT7Oo1XuUx.jpg",
+    "versions": [
+      {
+        "type": "VOSTFR",
+        "link": "https://drive.google.com/drive/folders/19I94D66_drDXKJva6o6y-DywHw_fEbFm?usp=drive_link"
+      }
+    ]
+  },
+  {
+    "id": "1762970285589",
+    "title": "Scream 4",
+    "year": 2011,
+    "description": "Dix ans se sont écoulés depuis les terribles meurtres commis par Ghostface. Sydney Prescott est parvenue à tourner la page, mais c’est tout de même avec appréhension qu’elle retourne à Woodsboro pour le lancement de son premier roman. Ses retrouvailles avec sa cousine Jill ainsi qu’avec le duo de choc Dewey et Gale seront de courte durée : Ghostface est de retour mais cette fois-ci, les règles vont changer.",
+    "tmdbRating": "6.5",
+    "ageRating": "Interdit aux moins de 12 ans",
+    "poster": "https://image.tmdb.org/t/p/w500/6b7QW0rseIiD6b5hqCFPqE378t.jpg",
+    "versions": [
+      {
+        "type": "VOSTFR",
+        "link": "https://drive.google.com/drive/folders/1EEaBrh8oTl1yyHIc7HFIdXyr9fguJsve?usp=drive_link"
+      }
+    ]
   }
 ]
