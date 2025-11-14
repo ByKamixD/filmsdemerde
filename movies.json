@@ -179,5 +179,35 @@
         "link": "https://drive.google.com/drive/folders/1RBRdO2mXKSpunYGTcBrYbA5-kX1TchsM?usp=drive_link"
       }
     ]
+  },
+  {
+    "id": "1763148581800",
+    "title": "Fear",
+    "year": 1996,
+    "description": "Steve, brillant architecte, commence une nouvelle vie avec sa seconde épouse Laura dans une charmante demeure dessinée par lui. Nicole, sa propre fille, devra apprendre à vivre dans cette famille recomposée en compagnie de Toby, fils de Laura. A seize ans, elle connaît l'émotion des premières raves party, des premières amours. David, rencontré sur une piste de danse, la séduit par son visage d'ange. Mais rapidement, son comportement lui semble étrange. Son père s'en mêle.",
+    "tmdbRating": "6.5",
+    "ageRating": "Interdit aux moins de 16 ans",
+    "poster": "https://image.tmdb.org/t/p/w500/w5vFocUKBIlQWomugu9UaXZUG7E.jpg",
+    "versions": [
+      {
+        "type": "VOSTFR",
+        "link": "https://drive.google.com/drive/folders/1W1fCi1REizPSQrNugP6Oo13TJhkPZzvO?usp=sharing"
+      }
+    ]
+  },
+  {
+    "id": "1763150188527",
+    "title": "Rampage : Sniper en liberté",
+    "year": 2009,
+    "description": "Un jeune désoeuvré, aigri par les frustrations quotidiennes, entre en rébellion contre la société. Il entreprend de se confectionner une armure et de rassembler un arsenal de guerre. Son but: une fusillade en pleine rue grâce à laquelle il réglera ses comptes. Qui pourra l'arrêter ?",
+    "tmdbRating": "5.9",
+    "ageRating": "Interdit aux moins de 18 ans",
+    "poster": "https://image.tmdb.org/t/p/w500/urMucbFtKPbM8uYtbM1ReIdjYHs.jpg",
+    "versions": [
+      {
+        "type": "VOSTFR",
+        "link": "https://drive.google.com/drive/folders/1xQw2gVQZpXRuC22yrv63LuKNoW-aFKaN?usp=sharing"
+      }
+    ]
   }
 ]
