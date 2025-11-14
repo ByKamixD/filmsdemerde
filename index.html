@@ -1514,7 +1514,8 @@
 
                     const hasChanges = (entry.changes.added && entry.changes.added.length > 0) ||
                                       (entry.changes.edited && entry.changes.edited.length > 0) ||
-                                      (entry.changes.deleted && entry.changes.deleted.length > 0);
+                                      (entry.changes.deleted && entry.changes.deleted.length > 0) ||
+                                      (entry.changes.reordered && entry.changes.reordered.length > 0);
 
                     if (!hasChanges) return;
 
@@ -1597,6 +1598,29 @@
                             html += `
                                 <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 4px;">
                                     • <span style="font-weight: 600;">${movie.title}</span>
+                                </div>
+                            `;
+                        });
+                        html += '</div></div>';
+                    }
+
+                    // Reordered movies
+                    if (entry.changes.reordered && entry.changes.reordered.length > 0) {
+                        html += `
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 8px; color: #f59e0b; font-weight: 600; font-size: 14px; margin-bottom: 8px;">
+                                    <svg style="width: 16px; height: 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                                    </svg>
+                                    ${entry.changes.reordered.length} film${entry.changes.reordered.length > 1 ? 's' : ''} réorganisé${entry.changes.reordered.length > 1 ? 's' : ''}
+                                </div>
+                                <div style="padding-left: 24px;">
+                        `;
+                        entry.changes.reordered.forEach(movie => {
+                            html += `
+                                <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 4px;">
+                                    • <span style="font-weight: 600;">${movie.title}</span>
+                                    <span style="color: #64748b; margin-left: 8px;">(Position ${movie.oldPosition} → ${movie.newPosition})</span>
                                 </div>
                             `;
                         });
