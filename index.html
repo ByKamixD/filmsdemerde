@@ -168,6 +168,57 @@
             height: 16px;
         }
 
+        .status-filter-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            background: rgba(51, 65, 85, 0.3);
+            color: #94a3b8;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .status-filter-btn:hover {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: #3b82f6;
+            color: #60a5fa;
+            transform: translateY(-1px);
+        }
+
+        .status-filter-btn.active {
+            background: #3b82f6;
+            border-color: #2563eb;
+            color: white;
+        }
+
+        .status-filter-btn:active {
+            transform: translateY(0);
+        }
+
+        body.light-mode .status-filter-btn {
+            background: #f1f5f9;
+            border-color: #e2e8f0;
+            color: #64748b;
+        }
+
+        body.light-mode .status-filter-btn:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: #3b82f6;
+            color: #2563eb;
+        }
+
+        body.light-mode .status-filter-btn.active {
+            background: #3b82f6;
+            border-color: #2563eb;
+            color: white;
+        }
+
         .movie-count {
             margin-left: auto;
             font-weight: 700;
@@ -177,6 +228,149 @@
             background: rgba(59, 130, 246, 0.1);
             border-radius: 8px;
             border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .personal-status-badges {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .status-badge.favorite {
+            background: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .status-badge.watched {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .status-badge.toWatch {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .status-badge svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        .personal-status-controls {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .status-toggle-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: rgba(51, 65, 85, 0.5);
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: #94a3b8;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .status-toggle-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .status-toggle-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .status-toggle-btn.favorite.active {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+            color: #f87171;
+        }
+
+        .status-toggle-btn.watched.active {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: #10b981;
+            color: #34d399;
+        }
+
+        .status-toggle-btn.toWatch.active {
+            background: rgba(245, 158, 11, 0.2);
+            border-color: #f59e0b;
+            color: #fbbf24;
+        }
+
+        .personal-notes-section {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #334155;
+        }
+
+        .personal-notes-textarea {
+            width: 100%;
+            padding: 12px;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: #e2e8f0;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .personal-notes-textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .watch-date-display {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        body.light-mode .status-toggle-btn {
+            background: #f8fafc;
+            border-color: #e2e8f0;
+            color: #64748b;
+        }
+
+        body.light-mode .personal-notes-textarea {
+            background: #f8fafc;
+            border-color: #e2e8f0;
+            color: #1e293b;
+        }
+
+        body.light-mode .personal-notes-section {
+            border-top-color: #e2e8f0;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
         }
 
         @keyframes slideIn {
@@ -959,12 +1153,229 @@
                 gap: 20px;
             }
         }
+
+        /* Light Mode Overrides */
+        body.light-mode {
+            background: #f8fafc;
+            background-image: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+                                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+            color: #1e293b;
+        }
+
+        body.light-mode header h1 {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body.light-mode header p {
+            color: #64748b;
+        }
+
+        body.light-mode .controls {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        body.light-mode .search-bar input {
+            background: #f8fafc;
+            border-color: #e2e8f0;
+            color: #1e293b;
+        }
+
+        body.light-mode .search-bar input::placeholder {
+            color: #94a3b8;
+        }
+
+        body.light-mode .search-bar input:focus {
+            background: #ffffff;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        body.light-mode .search-icon {
+            color: #94a3b8;
+        }
+
+        body.light-mode .filters label {
+            color: #475569;
+        }
+
+        body.light-mode .filters select {
+            background: #f8fafc;
+            border-color: #e2e8f0;
+            color: #1e293b;
+        }
+
+        body.light-mode .filters select:focus {
+            background: #ffffff;
+        }
+
+        body.light-mode .movie-count {
+            color: #2563eb;
+            background: rgba(59, 130, 246, 0.08);
+            border-color: rgba(59, 130, 246, 0.15);
+        }
+
+        body.light-mode .movie-card {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        body.light-mode .movie-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+            background: #f8fafc;
+        }
+
+        body.light-mode .movie-poster {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            color: #94a3b8;
+        }
+
+        body.light-mode .movie-title {
+            color: #0f172a;
+        }
+
+        body.light-mode .movie-description {
+            color: #64748b;
+        }
+
+        body.light-mode .movie-actions {
+            border-top-color: #e2e8f0;
+        }
+
+        body.light-mode .no-results {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            color: #475569;
+        }
+
+        body.light-mode .no-results-icon {
+            color: #94a3b8;
+        }
+
+        body.light-mode .loading {
+            color: #475569;
+        }
+
+        body.light-mode .loading-spinner {
+            border-color: #e2e8f0;
+            border-top-color: #3b82f6;
+        }
+
+        body.light-mode .modal-backdrop {
+            background: rgba(15, 23, 42, 0.6);
+        }
+
+        body.light-mode .modal,
+        body.light-mode .version-modal {
+            background: #ffffff;
+            border-color: #e2e8f0;
+        }
+
+        body.light-mode .modal-header,
+        body.light-mode .version-modal-header {
+            border-bottom-color: #e2e8f0;
+        }
+
+        body.light-mode .modal-title,
+        body.light-mode .version-modal-title {
+            color: #0f172a;
+        }
+
+        body.light-mode .modal-subtitle,
+        body.light-mode .version-modal-subtitle {
+            color: #64748b;
+        }
+
+        body.light-mode .modal-section {
+            border-top-color: #e2e8f0;
+        }
+
+        body.light-mode .modal-section-title {
+            color: #475569;
+        }
+
+        body.light-mode .modal-description {
+            color: #64748b;
+        }
+
+        body.light-mode .modal-footer {
+            border-top-color: #e2e8f0;
+        }
+
+        body.light-mode .modal-meta-item {
+            background: #f8fafc;
+            border-color: #e2e8f0;
+        }
+
+        body.light-mode .modal-meta-label {
+            color: #94a3b8;
+        }
+
+        body.light-mode .modal-meta-value {
+            color: #0f172a;
+        }
+
+        body.light-mode .version-option {
+            background: #f8fafc;
+            border-color: #e2e8f0;
+        }
+
+        body.light-mode .version-option:hover {
+            background: rgba(59, 130, 246, 0.05);
+            border-color: #3b82f6;
+        }
+
+        body.light-mode .version-type {
+            color: #0f172a;
+        }
+
+        body.light-mode .version-description {
+            color: #64748b;
+        }
+
+        body.light-mode .version-arrow {
+            color: #94a3b8;
+        }
+
+        body.light-mode .version-option:hover .version-arrow {
+            color: #3b82f6;
+        }
+
+        body.light-mode #changelogSection {
+            background: #ffffff;
+            border-color: #e2e8f0;
+        }
+
+        body.light-mode #darkModeToggle {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: rgba(139, 92, 246, 0.25);
+            color: #7c3aed;
+        }
+
+        body.light-mode #darkModeToggle:hover {
+            background: rgba(139, 92, 246, 0.15);
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Librairie</h1>
+            <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 12px;">
+                <h1>Librairie</h1>
+                <button id="darkModeToggle" onclick="toggleDarkMode()" title="Basculer le mode sombre"
+                        style="background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; flex-shrink: 0;">
+                    <svg id="darkModeIcon" style="width: 22px; height: 22px;" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Z"/>
+                    </svg>
+                </button>
+            </div>
             <p>Tous les films demandés, oui</p>
         </header>
 
@@ -985,6 +1396,33 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                 </svg>
                 <input type="text" id="searchInput" placeholder="Rechercher un film (titre, année, description)...">
+            </div>
+            <div class="filters" style="gap: 12px; margin-bottom: 16px; padding-top: 16px; border-top: 1px solid #334155;">
+                <label style="font-weight: 600; color: #cbd5e1; font-size: 14px;">Filtrer:</label>
+                <button class="status-filter-btn active" data-filter="all" onclick="filterByStatus('all')">
+                    <svg style="width: 16px; height: 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+                    </svg>
+                    Tous
+                </button>
+                <button class="status-filter-btn" data-filter="favorite" onclick="filterByStatus('favorite')">
+                    <svg style="width: 16px; height: 16px;" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    Favoris
+                </button>
+                <button class="status-filter-btn" data-filter="toWatch" onclick="filterByStatus('toWatch')">
+                    <svg style="width: 16px; height: 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    À voir
+                </button>
+                <button class="status-filter-btn" data-filter="watched" onclick="filterByStatus('watched')">
+                    <svg style="width: 16px; height: 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Vus
+                </button>
             </div>
             <div class="filters">
                 <label for="sortBy">Trier par:</label>
@@ -1007,6 +1445,12 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
                     Historique
+                </button>
+                <button id="suggestBtn" class="refresh-btn" onclick="openSuggestModal()" title="Suggérer un film" style="background: #f59e0b;">
+                    <svg class="refresh-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                    </svg>
+                    Suggérer un film
                 </button>
                 <div class="movie-count" id="movieCount">0 films</div>
             </div>
@@ -1055,6 +1499,94 @@
             </div>
             <div class="version-modal-body">
                 <div class="version-options" id="versionOptions"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Movie Suggestion Modal -->
+    <div id="suggestModal" class="modal-backdrop">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-title-section">
+                    <h2 class="modal-title">Suggérer un film</h2>
+                    <p style="color: #94a3b8; font-size: 14px; margin-top: 4px;">Proposez un film à ajouter à la collection</p>
+                </div>
+                <button class="modal-close" onclick="closeSuggestModal()">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="suggestionForm" action="https://formsubmit.co/movies@mowgli.jungleheart.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nouvelle suggestion de film">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <label style="display: block; color: #cbd5e1; font-weight: 600; margin-bottom: 8px; font-size: 14px;">
+                                Titre du film <span style="color: #ef4444;">*</span>
+                            </label>
+                            <input type="text" name="titre" required
+                                   style="width: 100%; padding: 12px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: #e2e8f0; font-size: 15px; font-family: 'Inter', sans-serif;"
+                                   placeholder="Ex: Inception">
+                        </div>
+
+                        <div>
+                            <label style="display: block; color: #cbd5e1; font-weight: 600; margin-bottom: 8px; font-size: 14px;">
+                                Année
+                            </label>
+                            <input type="number" name="annee" min="1900" max="2030"
+                                   style="width: 100%; padding: 12px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: #e2e8f0; font-size: 15px; font-family: 'Inter', sans-serif;"
+                                   placeholder="Ex: 2010">
+                        </div>
+
+                        <div>
+                            <label style="display: block; color: #cbd5e1; font-weight: 600; margin-bottom: 8px; font-size: 14px;">
+                                Votre email (optionnel)
+                            </label>
+                            <input type="email" name="email"
+                                   style="width: 100%; padding: 12px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: #e2e8f0; font-size: 15px; font-family: 'Inter', sans-serif;"
+                                   placeholder="Pour vous contacter si besoin">
+                            <p style="margin: 6px 0 0 0; font-size: 12px; color: #64748b; font-style: italic;">
+                                Laissez votre email si vous souhaitez être contacté
+                            </p>
+                        </div>
+
+                        <div>
+                            <label style="display: block; color: #cbd5e1; font-weight: 600; margin-bottom: 8px; font-size: 14px;">
+                                Version préférée
+                            </label>
+                            <select name="version"
+                                    style="width: 100%; padding: 12px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: #e2e8f0; font-size: 15px; font-family: 'Inter', sans-serif; cursor: pointer;">
+                                <option value="Pas de préférence">Pas de préférence</option>
+                                <option value="VF">VF (Version Française)</option>
+                                <option value="VOSTFR">VOSTFR (Sous-titres français)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label style="display: block; color: #cbd5e1; font-weight: 600; margin-bottom: 8px; font-size: 14px;">
+                                Pourquoi ce film ? / Demandes spéciales
+                            </label>
+                            <textarea name="raison" rows="4"
+                                      style="width: 100%; padding: 12px; background: #0f172a; border: 1px solid #334155; border-radius: 8px; color: #e2e8f0; font-size: 15px; font-family: 'Inter', sans-serif; resize: vertical;"
+                                      placeholder="Dites-nous pourquoi vous aimeriez voir ce film dans la collection... Vous pouvez aussi préciser si vous voulez une autre langue, des sous-titres spécifiques, ou toute autre demande particulière."></textarea>
+                        </div>
+
+                        <button type="submit"
+                                style="width: 100%; padding: 14px; background: #f59e0b; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px;"
+                                onmouseover="this.style.background='#d97706'; this.style.transform='translateY(-2px)'"
+                                onmouseout="this.style.background='#f59e0b'; this.style.transform='translateY(0)'"
+                                onmousedown="this.style.transform='translateY(0)'">
+                            <svg style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                            </svg>
+                            Envoyer la suggestion
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -1245,6 +1777,36 @@
                     <h3 class="modal-section-title">Synopsis</h3>
                     <p class="modal-description">${movie.description}</p>
                 </div>
+
+                <div class="modal-section">
+                    <h3 class="modal-section-title">Mon suivi personnel</h3>
+                    <div class="personal-status-controls">
+                        <button id="modalFavoriteBtn" class="status-toggle-btn favorite ${getMoviePersonalData(movie.id).favorite ? 'active' : ''}" onclick="toggleMovieStatus('${movie.id}', 'favorite')">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            Favori
+                        </button>
+                        <button id="modalToWatchBtn" class="status-toggle-btn toWatch ${getMoviePersonalData(movie.id).toWatch ? 'active' : ''}" onclick="toggleMovieStatus('${movie.id}', 'toWatch')">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            À voir
+                        </button>
+                        <button id="modalWatchedBtn" class="status-toggle-btn watched ${getMoviePersonalData(movie.id).watched ? 'active' : ''}" onclick="toggleMovieStatus('${movie.id}', 'watched')">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Vu
+                        </button>
+                    </div>
+                    <div id="watchDateDisplay" class="watch-date-display" style="display: none;"></div>
+                </div>
+
+                <div class="personal-notes-section">
+                    <h3 class="modal-section-title">Mes notes</h3>
+                    <textarea id="modalNotes" class="personal-notes-textarea" placeholder="Ajoutez vos notes personnelles sur ce film..." onchange="updateMovieNotes('${movie.id}', this.value)">${getMoviePersonalData(movie.id).notes}</textarea>
+                </div>
             `;
 
             // Set download button click handler
@@ -1255,6 +1817,9 @@
             // Show modal
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
+
+            // Update personal controls (for watch date display)
+            updateModalPersonalControls(movie.id);
         }
 
         // Close movie modal
@@ -1276,7 +1841,10 @@
             if (e.key === 'Escape') {
                 const movieModal = document.getElementById('movieModal');
                 const versionModal = document.getElementById('versionModal');
-                if (versionModal.classList.contains('active')) {
+                const suggestModal = document.getElementById('suggestModal');
+                if (suggestModal.classList.contains('active')) {
+                    closeSuggestModal();
+                } else if (versionModal.classList.contains('active')) {
                     closeVersionModal();
                 } else if (movieModal.classList.contains('active')) {
                     closeModal();
@@ -1309,7 +1877,18 @@
                         <svg class="no-results-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
-                        <div>Erreur lors du chargement des films</div>
+                        <div style="font-size: 18px; font-weight: 600; margin-bottom: 12px;">Erreur lors du chargement des films</div>
+                        <div style="font-size: 14px; color: #94a3b8; max-width: 600px; margin: 0 auto;">
+                            <p style="margin-bottom: 12px;">Impossible de charger <code style="background: #0f172a; padding: 2px 6px; border-radius: 4px; color: #60a5fa;">movies.json</code></p>
+                            <div style="text-align: left; background: rgba(15, 23, 42, 0.5); padding: 16px; border-radius: 8px; border: 1px solid #334155; margin-top: 16px;">
+                                <p style="margin-bottom: 12px;"><strong>Si vous testez en local :</strong></p>
+                                <p style="margin-bottom: 8px;">Utilisez un serveur HTTP :</p>
+                                <code style="background: #0f172a; padding: 2px 6px; border-radius: 4px; color: #60a5fa;">python -m http.server 8000</code><br>
+                                <span style="font-size: 12px; color: #64748b;">ou double-cliquez sur start-server.bat (Windows)</span>
+                                <p style="margin-top: 12px;"><strong>Sur GitHub Pages :</strong></p>
+                                <p style="font-size: 13px;">Vérifiez que <code style="background: #0f172a; padding: 2px 6px; border-radius: 4px; color: #60a5fa;">movies.json</code> existe dans votre dépôt</p>
+                            </div>
+                        </div>
                     </div>
                 `;
                 console.error('Erreur:', error);
@@ -1405,6 +1984,7 @@
                                         }
                                         return '';
                                     })()}
+                                    ${getStatusBadgesHTML(movie.id)}
                                 </div>
                                 <div class="movie-description">${movie.description}</div>
                             </div>
@@ -1642,6 +2222,234 @@
                 `;
             }
         }
+
+        // Open suggestion modal
+        function openSuggestModal() {
+            const modal = document.getElementById('suggestModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close suggestion modal
+        function closeSuggestModal() {
+            const modal = document.getElementById('suggestModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            document.getElementById('suggestionForm').reset();
+        }
+
+        // Close suggestion modal on backdrop click
+        document.getElementById('suggestModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSuggestModal();
+            }
+        });
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            const body = document.body;
+            const darkModeIcon = document.getElementById('darkModeIcon');
+
+            body.classList.toggle('light-mode');
+
+            // Update icon
+            if (body.classList.contains('light-mode')) {
+                // Show sun icon for light mode
+                darkModeIcon.innerHTML = '<path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"/><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"/><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"/><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"/><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"/><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"/><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"/><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"/><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"/>';
+            } else {
+                // Show moon icon for dark mode
+                darkModeIcon.innerHTML = '<path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Z"/>';
+            }
+
+            // Save preference to localStorage
+            localStorage.setItem('darkMode', body.classList.contains('light-mode') ? 'light' : 'dark');
+        }
+
+        // Load dark mode preference on page load
+        function loadDarkModePreference() {
+            const savedMode = localStorage.getItem('darkMode');
+            if (savedMode === 'light') {
+                document.body.classList.add('light-mode');
+                const darkModeIcon = document.getElementById('darkModeIcon');
+                darkModeIcon.innerHTML = '<path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"/><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"/><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"/><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"/><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"/><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"/><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"/><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"/><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"/>';
+            }
+        }
+
+        // Personal Data Management in localStorage
+        let personalData = {};
+        let currentStatusFilter = 'all';
+
+        // Load personal data from localStorage
+        function loadPersonalData() {
+            const saved = localStorage.getItem('moviePersonalData');
+            if (saved) {
+                personalData = JSON.parse(saved);
+            }
+        }
+
+        // Save personal data to localStorage
+        function savePersonalData() {
+            localStorage.setItem('moviePersonalData', JSON.stringify(personalData));
+        }
+
+        // Get personal data for a movie
+        function getMoviePersonalData(movieId) {
+            return personalData[movieId] || {
+                favorite: false,
+                watched: false,
+                toWatch: false,
+                notes: '',
+                watchDate: null
+            };
+        }
+
+        // Toggle movie status
+        function toggleMovieStatus(movieId, statusType) {
+            if (!personalData[movieId]) {
+                personalData[movieId] = getMoviePersonalData(movieId);
+            }
+
+            personalData[movieId][statusType] = !personalData[movieId][statusType];
+
+            // If marking as watched, record watch date
+            if (statusType === 'watched' && personalData[movieId].watched) {
+                personalData[movieId].watchDate = new Date().toISOString();
+            } else if (statusType === 'watched' && !personalData[movieId].watched) {
+                personalData[movieId].watchDate = null;
+            }
+
+            savePersonalData();
+            displayMovies();
+
+            // Update modal if it's open
+            if (currentMovie && currentMovie.id === movieId) {
+                updateModalPersonalControls(movieId);
+            }
+        }
+
+        // Update movie notes
+        function updateMovieNotes(movieId, notes) {
+            if (!personalData[movieId]) {
+                personalData[movieId] = getMoviePersonalData(movieId);
+            }
+            personalData[movieId].notes = notes;
+            savePersonalData();
+        }
+
+        // Filter movies by status
+        function filterByStatus(status) {
+            currentStatusFilter = status;
+
+            // Update active button
+            document.querySelectorAll('.status-filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-filter="${status}"]`).classList.add('active');
+
+            // Apply filter
+            if (status === 'all') {
+                filteredMovies = [...allMovies];
+            } else {
+                filteredMovies = allMovies.filter(movie => {
+                    const data = getMoviePersonalData(movie.id);
+                    return data[status] === true;
+                });
+            }
+
+            // Also apply current search term if any
+            const searchTerm = document.getElementById('searchInput').value;
+            if (searchTerm) {
+                const normalizedSearch = normalizeString(searchTerm);
+                filteredMovies = filteredMovies.filter(movie =>
+                    normalizeString(movie.title).includes(normalizedSearch) ||
+                    normalizeString(movie.description).includes(normalizedSearch) ||
+                    movie.year.toString().includes(normalizedSearch)
+                );
+            }
+
+            sortMovies();
+        }
+
+        // Get status badges HTML for a movie
+        function getStatusBadgesHTML(movieId) {
+            const data = getMoviePersonalData(movieId);
+            let html = '';
+
+            if (data.favorite) {
+                html += `
+                    <span class="status-badge favorite">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Favori
+                    </span>
+                `;
+            }
+
+            if (data.watched) {
+                html += `
+                    <span class="status-badge watched">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Vu
+                    </span>
+                `;
+            }
+
+            if (data.toWatch) {
+                html += `
+                    <span class="status-badge toWatch">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        À voir
+                    </span>
+                `;
+            }
+
+            return html ? `<div class="personal-status-badges">${html}</div>` : '';
+        }
+
+        // Update modal personal controls
+        function updateModalPersonalControls(movieId) {
+            const data = getMoviePersonalData(movieId);
+
+            // Update toggle buttons
+            const favoriteBtn = document.getElementById('modalFavoriteBtn');
+            const watchedBtn = document.getElementById('modalWatchedBtn');
+            const toWatchBtn = document.getElementById('modalToWatchBtn');
+
+            if (favoriteBtn) {
+                favoriteBtn.className = `status-toggle-btn favorite ${data.favorite ? 'active' : ''}`;
+            }
+            if (watchedBtn) {
+                watchedBtn.className = `status-toggle-btn watched ${data.watched ? 'active' : ''}`;
+            }
+            if (toWatchBtn) {
+                toWatchBtn.className = `status-toggle-btn toWatch ${data.toWatch ? 'active' : ''}`;
+            }
+
+            // Update watch date display
+            const watchDateDisplay = document.getElementById('watchDateDisplay');
+            if (watchDateDisplay && data.watchDate) {
+                const date = new Date(data.watchDate);
+                watchDateDisplay.textContent = `Vu le ${date.toLocaleDateString('fr-FR', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                })}`;
+                watchDateDisplay.style.display = 'block';
+            } else if (watchDateDisplay) {
+                watchDateDisplay.style.display = 'none';
+            }
+        }
+
+        // Load dark mode preference before loading movies
+        loadDarkModePreference();
+
+        // Load personal data before loading movies
+        loadPersonalData();
 
         // Charger les films au démarrage
         loadMovies();
