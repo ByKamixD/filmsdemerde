@@ -931,18 +931,19 @@
 
         .ad-container-vertical {
             position: fixed;
-            top: 100px;
+            top: 120px;
             width: 160px;
-            min-height: 600px;
+            height: 600px;
             z-index: 40;
+            display: none;
         }
 
         .ad-container-vertical-left {
-            left: 0;
+            left: 10px;
         }
 
         .ad-container-vertical-right {
-            right: 0;
+            right: 10px;
         }
 
         .ad-container-multiplex {
@@ -950,6 +951,13 @@
             margin: 48px auto 32px;
             padding: 0 24px;
             min-height: 250px;
+        }
+
+        /* Only show vertical ads on very large screens */
+        @media (min-width: 1600px) {
+            .ad-container-vertical {
+                display: block;
+            }
         }
 
         /* AdBlock Detection Popup */
@@ -1104,10 +1112,6 @@
             .filter-pills {
                 display: none;
             }
-
-            .ad-container-vertical {
-                display: none;
-            }
         }
 
         @media (max-width: 480px) {
@@ -1148,29 +1152,19 @@
         </div>
     </header>
 
-    <!-- Vertical Ads -->
-    <div class="ad-container-vertical ad-container-vertical-left">
+    <!-- Vertical Ads (Large Screens Only) -->
+    <div class="ad-container-vertical ad-container-vertical-left" id="leftVerticalAd">
         <ins class="adsbygoogle"
-             style="display:block"
+             style="display:inline-block;width:160px;height:600px"
              data-ad-client="ca-pub-8581760997356468"
-             data-ad-slot="9772479040"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+             data-ad-slot="9772479040"></ins>
     </div>
 
-    <div class="ad-container-vertical ad-container-vertical-right">
+    <div class="ad-container-vertical ad-container-vertical-right" id="rightVerticalAd">
         <ins class="adsbygoogle"
-             style="display:block"
+             style="display:inline-block;width:160px;height:600px"
              data-ad-client="ca-pub-8581760997356468"
-             data-ad-slot="9772479040"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+             data-ad-slot="9772479040"></ins>
     </div>
 
     <!-- Main Container -->
@@ -1266,9 +1260,6 @@
              data-ad-slot="8266049588"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
     </div>
 
     <div class="container">
@@ -1288,9 +1279,6 @@
              data-ad-format="autorelaxed"
              data-ad-client="ca-pub-8581760997356468"
              data-ad-slot="7062555226"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
     </div>
 
     <!-- Floating Account Button -->
@@ -1331,7 +1319,7 @@
         </div>
     </div>
 
-    <!-- Suggest Movie -->
+    <!-- Suggest Movie Modal -->
     <div class="modal-backdrop" id="suggestModal">
         <div class="modal">
             <div class="modal-header">
@@ -2347,15 +2335,47 @@
             }
         }
 
+        // Initialize Ads
+        function initializeAds() {
+            // Load horizontal ad
+            const horizontalAds = document.querySelectorAll('.ad-container-horizontal .adsbygoogle');
+            horizontalAds.forEach(ad => {
+                if (!ad.dataset.adsbygoogleStatus) {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                }
+            });
+
+            // Load multiplex ad
+            const multiplexAds = document.querySelectorAll('.ad-container-multiplex .adsbygoogle');
+            multiplexAds.forEach(ad => {
+                if (!ad.dataset.adsbygoogleStatus) {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                }
+            });
+
+            // Load vertical ads only on large screens (>= 1600px)
+            if (window.innerWidth >= 1600) {
+                const verticalAds = document.querySelectorAll('.ad-container-vertical .adsbygoogle');
+                verticalAds.forEach(ad => {
+                    if (!ad.dataset.adsbygoogleStatus) {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                });
+            }
+        }
+
         // Initialize
         loadPersonalData();
         loadDarkModePreference();
         loadMovies();
         checkFirstVisit();
 
-        // Detect AdBlock after page loads
+        // Initialize ads and detect AdBlock after page loads
         window.addEventListener('load', () => {
-            setTimeout(detectAdBlock, 2000);
+            setTimeout(() => {
+                initializeAds();
+                detectAdBlock();
+            }, 1000);
         });
     </script>
 </body>
