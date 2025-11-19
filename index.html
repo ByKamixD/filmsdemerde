@@ -1382,7 +1382,7 @@
         <!-- Changelog Section -->
         <div id="changelogSection" class="controls" style="display: none;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                <h3 style="font-size: 1.25rem; font-weight: 700; color: #f1f5f9; margin: 0;">Dernières modifications</h3>
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: #f1f5f9; margin: 0;">📝 Mises à jour récentes</h3>
                 <button onclick="toggleChangelog()" style="background: #334155; color: #cbd5e1; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 14px; transition: all 0.2s;">
                     Masquer
                 </button>
@@ -1444,7 +1444,7 @@
                     <svg class="refresh-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
-                    Historique
+                    Mises à jour
                 </button>
                 <button id="suggestBtn" class="refresh-btn" onclick="openSuggestModal()" title="Suggérer un film" style="background: #f59e0b;">
                     <svg class="refresh-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
@@ -2005,11 +2005,27 @@
         // Recherche with accent and case insensitive
         document.getElementById('searchInput').addEventListener('input', (e) => {
             const searchTerm = normalizeString(e.target.value);
-            filteredMovies = allMovies.filter(movie =>
-                normalizeString(movie.title).includes(searchTerm) ||
-                normalizeString(movie.description).includes(searchTerm) ||
-                movie.year.toString().includes(searchTerm)
-            );
+
+            // Start with movies filtered by status
+            let moviesToFilter = allMovies;
+            if (currentStatusFilter !== 'all') {
+                moviesToFilter = allMovies.filter(movie => {
+                    const data = getMoviePersonalData(movie.id);
+                    return data[currentStatusFilter] === true;
+                });
+            }
+
+            // Apply search filter
+            if (searchTerm) {
+                filteredMovies = moviesToFilter.filter(movie =>
+                    normalizeString(movie.title).includes(searchTerm) ||
+                    normalizeString(movie.description).includes(searchTerm) ||
+                    movie.year.toString().includes(searchTerm)
+                );
+            } else {
+                filteredMovies = moviesToFilter;
+            }
+
             sortMovies();
         });
 
@@ -2455,4 +2471,4 @@
         loadMovies();
     </script>
 </body>
-</html>
+</html> 
