@@ -1379,15 +1379,84 @@
             <p>Tous les films demandés, oui</p>
         </header>
 
-        <!-- Changelog Section -->
-        <div id="changelogSection" class="controls" style="display: none;">
+        <!-- Movie Changelog Section -->
+        <div id="movieChangelogSection" class="controls" style="display: none;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                <h3 style="font-size: 1.25rem; font-weight: 700; color: #f1f5f9; margin: 0;">📝 Mises à jour récentes</h3>
-                <button onclick="toggleChangelog()" style="background: #334155; color: #cbd5e1; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 14px; transition: all 0.2s;">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: #f1f5f9; margin: 0;">Films - Dernières modifications</h3>
+                <button onclick="toggleMovieChangelog()" style="background: #334155; color: #cbd5e1; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 14px; transition: all 0.2s;">
                     Masquer
                 </button>
             </div>
-            <div id="changelogContent" style="max-height: 300px; overflow-y: auto;"></div>
+            <div id="movieChangelogContent" style="max-height: 300px; overflow-y: auto;"></div>
+        </div>
+
+        <!-- Website Updates Section -->
+        <div id="websiteUpdatesSection" class="controls" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <h3 style="font-size: 1.25rem; font-weight: 700; color: #f1f5f9; margin: 0;">Mises à jour du site</h3>
+                <button onclick="toggleWebsiteUpdates()" style="background: #334155; color: #cbd5e1; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 14px; transition: all 0.2s;">
+                    Masquer
+                </button>
+            </div>
+            <div id="websiteUpdatesContent" style="max-height: 400px; overflow-y: auto;">
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <!-- Update Entry -->
+                    <div style="background: rgba(30, 41, 59, 0.5); border: 1px solid #334155; border-radius: 12px; padding: 16px;">
+                        <div style="font-size: 12px; color: #64748b; margin-bottom: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                            Novembre 2025
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 8px; color: #10b981; font-weight: 600; font-size: 14px; margin-bottom: 8px;">
+                                    <svg style="width: 16px; height: 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                    </svg>
+                                    Nouvelles fonctionnalités
+                                </div>
+                                <div style="padding-left: 24px;">
+                                    <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 6px;">
+                                        • <span style="font-weight: 600;">Suivi personnel</span> - Marquez vos films comme Favoris, À voir, ou Vus
+                                    </div>
+                                    <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 6px;">
+                                        • <span style="font-weight: 600;">Notes privées</span> - Ajoutez vos propres notes et avis sur chaque film
+                                    </div>
+                                    <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 6px;">
+                                        • <span style="font-weight: 600;">Filtres de statut</span> - Filtrez par Favoris, À voir, ou Vus
+                                    </div>
+                                    <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 6px;">
+                                        • <span style="font-weight: 600;">Mode sombre/clair</span> - Basculez entre les thèmes avec le bouton en haut
+                                    </div>
+                                    <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 6px;">
+                                        • <span style="font-weight: 600;">Suggestions de films</span> - Proposez des films via le formulaire (sans compte requis)
+                                    </div>
+                                    <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 6px;">
+                                        • <span style="font-weight: 600;">Date de visionnage</span> - Enregistrement automatique quand vous marquez un film comme "Vu"
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 8px; color: #3b82f6; font-weight: 600; font-size: 14px; margin-bottom: 8px;">
+                                    <svg style="width: 16px; height: 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                    </svg>
+                                    Améliorations
+                                </div>
+                                <div style="padding-left: 24px;">
+                                    <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 6px;">
+                                        • Interface plus moderne avec animations fluides
+                                    </div>
+                                    <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 6px;">
+                                        • Toutes les données personnelles sauvegardées dans votre navigateur
+                                    </div>
+                                    <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 6px;">
+                                        • Badges de statut visibles directement sur les cartes de films
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="controls">
@@ -1440,11 +1509,17 @@
                     </svg>
                     Actualiser
                 </button>
-                <button id="changelogBtn" class="refresh-btn" onclick="toggleChangelog()" title="Voir les dernières modifications" style="background: #6366f1;">
+                <button id="updatesBtn" class="refresh-btn" onclick="toggleWebsiteUpdates()" title="Voir les mises à jour du site" style="background: #6366f1;">
+                    <svg class="refresh-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                    Mises à jour
+                </button>
+                <button id="movieChangelogBtn" class="refresh-btn" onclick="toggleMovieChangelog()" title="Voir l'historique des films" style="background: #8b5cf6;">
                     <svg class="refresh-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
-                    Mises à jour
+                    Historique films
                 </button>
                 <button id="suggestBtn" class="refresh-btn" onclick="openSuggestModal()" title="Suggérer un film" style="background: #f59e0b;">
                     <svg class="refresh-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
@@ -2057,23 +2132,33 @@
             displayMovies();
         }
 
-        // Toggle changelog visibility
-        function toggleChangelog() {
-            const section = document.getElementById('changelogSection');
+        // Toggle website updates visibility
+        function toggleWebsiteUpdates() {
+            const section = document.getElementById('websiteUpdatesSection');
             if (section.style.display === 'none') {
                 section.style.display = 'block';
-                loadChangelog();
             } else {
                 section.style.display = 'none';
             }
         }
 
-        // Load and display changelog
-        async function loadChangelog() {
+        // Toggle movie changelog visibility
+        function toggleMovieChangelog() {
+            const section = document.getElementById('movieChangelogSection');
+            if (section.style.display === 'none') {
+                section.style.display = 'block';
+                loadMovieChangelog();
+            } else {
+                section.style.display = 'none';
+            }
+        }
+
+        // Load and display movie changelog
+        async function loadMovieChangelog() {
             try {
                 const response = await fetch('changelog.json?' + Date.now());
                 if (!response.ok) {
-                    document.getElementById('changelogContent').innerHTML = `
+                    document.getElementById('movieChangelogContent').innerHTML = `
                         <div style="text-align: center; padding: 40px; color: #94a3b8;">
                             <p>Aucun historique disponible pour le moment</p>
                         </div>
@@ -2085,7 +2170,7 @@
                 const changelog = JSON.parse(text);
 
                 if (!changelog || changelog.length === 0) {
-                    document.getElementById('changelogContent').innerHTML = `
+                    document.getElementById('movieChangelogContent').innerHTML = `
                         <div style="text-align: center; padding: 40px; color: #94a3b8;">
                             <p>Aucune modification récente</p>
                         </div>
@@ -2228,10 +2313,10 @@
 
                 html += '</div>';
 
-                document.getElementById('changelogContent').innerHTML = html;
+                document.getElementById('movieChangelogContent').innerHTML = html;
             } catch (error) {
                 console.error('Erreur chargement changelog:', error);
-                document.getElementById('changelogContent').innerHTML = `
+                document.getElementById('movieChangelogContent').innerHTML = `
                     <div style="text-align: center; padding: 40px; color: #94a3b8;">
                         <p>Impossible de charger l'historique</p>
                     </div>
@@ -2471,4 +2556,4 @@
         loadMovies();
     </script>
 </body>
-</html> 
+</html>
