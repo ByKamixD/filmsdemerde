@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8581760997356468"
+     crossorigin="anonymous"></script>
+
     <style>
         * {
             margin: 0;
@@ -914,6 +918,122 @@
             margin-top: -12px;
         }
 
+        /* Advertising */
+        .ad-container-horizontal {
+            max-width: 1400px;
+            margin: 0 auto 32px;
+            padding: 0 24px;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ad-container-vertical {
+            position: fixed;
+            top: 100px;
+            width: 160px;
+            min-height: 600px;
+            z-index: 40;
+        }
+
+        .ad-container-vertical-left {
+            left: 0;
+        }
+
+        .ad-container-vertical-right {
+            right: 0;
+        }
+
+        .ad-container-multiplex {
+            max-width: 1400px;
+            margin: 48px auto 32px;
+            padding: 0 24px;
+            min-height: 250px;
+        }
+
+        /* AdBlock Detection Popup */
+        .adblock-popup {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 5000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .adblock-popup.active {
+            display: flex;
+        }
+
+        .adblock-content {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            max-width: 500px;
+            width: 100%;
+            padding: 32px;
+            text-align: center;
+        }
+
+        .adblock-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            color: var(--warning);
+        }
+
+        .adblock-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .adblock-message {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .adblock-close-btn {
+            padding: 14px 32px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-tertiary);
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: not-allowed;
+            transition: all 0.2s ease;
+            opacity: 0.5;
+        }
+
+        .adblock-close-btn.enabled {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        .adblock-close-btn.enabled:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .adblock-timer {
+            display: block;
+            font-size: 12px;
+            color: var(--text-tertiary);
+            margin-top: 12px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
@@ -984,6 +1104,10 @@
             .filter-pills {
                 display: none;
             }
+
+            .ad-container-vertical {
+                display: none;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1023,6 +1147,31 @@
             </div>
         </div>
     </header>
+
+    <!-- Vertical Ads -->
+    <div class="ad-container-vertical ad-container-vertical-left">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8581760997356468"
+             data-ad-slot="9772479040"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div class="ad-container-vertical ad-container-vertical-right">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8581760997356468"
+             data-ad-slot="9772479040"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 
     <!-- Main Container -->
     <div class="container">
@@ -1107,7 +1256,22 @@
             <h3 style="margin-bottom: 20px; font-size: 18px; font-weight: 700;">Historique des films</h3>
             <div id="movieChangelogContent"></div>
         </div>
+    </div>
 
+    <!-- Horizontal Ad -->
+    <div class="ad-container-horizontal">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8581760997356468"
+             data-ad-slot="8266049588"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div class="container">
         <!-- Movies Grid -->
         <div class="movies-grid" id="moviesContainer">
             <div class="loading">
@@ -1115,6 +1279,18 @@
                 <div>Chargement des films...</div>
             </div>
         </div>
+    </div>
+
+    <!-- Multiplex Ad -->
+    <div class="ad-container-multiplex">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="autorelaxed"
+             data-ad-client="ca-pub-8581760997356468"
+             data-ad-slot="7062555226"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
 
     <!-- Floating Account Button -->
@@ -1345,7 +1521,7 @@
                     <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.1)); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
                         <div style="font-size: 15px; font-weight: 600; margin-bottom: 8px; color: var(--warning);">À propos</div>
                         <div style="font-size: 14px; line-height: 1.6; color: var(--text-secondary);">
-                            Ce site a été créé par un français blablablabla.
+                            Ce site a été créé par un français random qui aime partager des films.
                         </div>
                     </div>
                 </div>
@@ -1354,6 +1530,24 @@
                     Compris, commencer à explorer
                 </button>
             </div>
+        </div>
+    </div>
+
+    <!-- AdBlock Detection Popup -->
+    <div class="adblock-popup" id="adblockPopup">
+        <div class="adblock-content">
+            <svg class="adblock-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <h2 class="adblock-title">Désactivez votre bloqueur de publicités</h2>
+            <p class="adblock-message">
+                Ce site est entièrement gratuit et les publicités nous aident à maintenir ce service.
+                Veuillez désactiver votre bloqueur de publicités pour continuer à profiter de nos films gratuitement.
+            </p>
+            <button class="adblock-close-btn" id="adblockCloseBtn" onclick="closeAdblockPopup()">
+                Fermer (<span id="adblockTimer">20</span>s)
+            </button>
+            <span class="adblock-timer">Vous pourrez fermer cette fenêtre dans <span id="adblockTimerText">20</span> secondes</span>
         </div>
     </div>
 
@@ -2093,11 +2287,76 @@
             }
         }
 
+        // AdBlock Detection
+        function detectAdBlock() {
+            // Check if AdSense is loaded
+            let adBlockEnabled = false;
+
+            // Create a test ad element
+            const testAd = document.createElement('div');
+            testAd.innerHTML = '&nbsp;';
+            testAd.className = 'adsbygoogle';
+            testAd.style.cssText = 'width: 1px !important; height: 1px !important; position: absolute !important; left: -10000px !important; top: -1000px !important;';
+
+            document.body.appendChild(testAd);
+
+            setTimeout(() => {
+                // Check if the ad was blocked
+                if (testAd.offsetHeight === 0 || !window.adsbygoogle || window.adsbygoogle.loaded !== true) {
+                    adBlockEnabled = true;
+                }
+
+                document.body.removeChild(testAd);
+
+                if (adBlockEnabled) {
+                    showAdBlockPopup();
+                }
+            }, 100);
+        }
+
+        function showAdBlockPopup() {
+            const popup = document.getElementById('adblockPopup');
+            const closeBtn = document.getElementById('adblockCloseBtn');
+            const timerDisplay = document.getElementById('adblockTimer');
+            const timerText = document.getElementById('adblockTimerText');
+
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            let timeLeft = 20;
+
+            const countdown = setInterval(() => {
+                timeLeft--;
+                timerDisplay.textContent = timeLeft;
+                timerText.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    closeBtn.classList.add('enabled');
+                    closeBtn.innerHTML = 'Fermer';
+                    document.querySelector('.adblock-timer').style.display = 'none';
+                }
+            }, 1000);
+        }
+
+        function closeAdblockPopup() {
+            const closeBtn = document.getElementById('adblockCloseBtn');
+            if (closeBtn.classList.contains('enabled')) {
+                document.getElementById('adblockPopup').classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
         // Initialize
         loadPersonalData();
         loadDarkModePreference();
         loadMovies();
         checkFirstVisit();
+
+        // Detect AdBlock after page loads
+        window.addEventListener('load', () => {
+            setTimeout(detectAdBlock, 2000);
+        });
     </script>
 </body>
 </html>
